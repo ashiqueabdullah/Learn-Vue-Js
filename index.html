@@ -8,23 +8,18 @@
 <body>
     
         <div id="app">
-           <p v-if="condition('Husband')">
-               <span>Name: {{as.name}}</span><br>
-               <span>Age: {{as.Age}}</span><br>
-               <span>Occupation: {{as.Occupation}}</span><br>
-           </p>
-           <p v-else>
-                <span>Name: {{si.name}}</span><br>
-                <span>Age: {{si.Age}}</span><br>
-                <span>Occupation: {{si.Occupation}}</span><br>
+
+           <p v-for="a in ar">
+                {{a}}
            </p>
 
-           <p v-show="si.name=='Ashique Abdullah'">
-               <span>{{as.name}}</span>
-           </p>
-           <p v-show="si.name=='Sidra Ashraf'">
-            <span>{{si.name}}</span>
-        </p>
+           <p v-for="(a,index) in ar">
+                {{index}} : {{a}}
+            </p>
+
+            <p v-for="(value,key,index) in user">
+                {{key}} : {{value}} : {{index}}
+            </p>
         </div>
 
     <script src="vue.js"></script>
