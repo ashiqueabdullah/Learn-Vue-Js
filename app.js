@@ -5,11 +5,13 @@ new Vue({
        b:0,
        salary:10
     },
-    methods:{
+    computed:{
         as(){
+            console.log("A +");
             return this.a + this.salary;
         },
         bs(){
+            console.log("B +");
             return this.b + this.salary;
         }
 
