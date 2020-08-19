@@ -1,24 +1,26 @@
 new Vue({
-    el: "#app",
+    el:"#app",
     data:{
-        title:"First Vue test",
-        date:"08.18.20",
-        arr:[1,2,3,4],
-        obj:{
-            tr:true
+        as:{
+            name:"Ashique Abdullah",
+            Age:24,
+            Occupation:"Software Engineer"
         },
-        img:{
-            src:"img/img.jpg",
-            alt:"image",
-            width:200,
-            height:200
-        },
-        mytext:"v-text er kaj kortechi",
-        myhtml:"<b>Bold v-html</b>"
+        si:{
+            name:"Sidra Ashraf",
+            Age:23,
+            Occupation:"Software Engineer" 
+        } 
     },
-    methods: {
-        funs(){
-            return this.title
+    methods:{
+        husband(){
+            return this.name,this.Age,this.Occupation
+        },
+        wife(){
+            return this.name,this.Age,this.Occupation
+        },
+        condition(pr){
+            return pr==="Husband" ? true : false;
         }
     }
 });
