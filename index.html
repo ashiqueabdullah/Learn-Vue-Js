@@ -7,10 +7,18 @@
 </head>
 <body>
     
-        <div id="app">
-            <button @click="a++">A+</button>
-            <p>{{a}}</p>
+        <div id="app1">
+            <h1>Name: {{user.name}}</h1>
+            <h1>Name: {{user.age}}</h1>
+            <h1>Name: {{user.occupation}}</h1>
+            <button @click="update">Click to change</button>
         </div>
+        <div id="app2">
+           <h1>Name: {{user.name}}</h1>
+           <h1>Name: {{user.age}}</h1>
+           <h1>Name: {{user.occupation}}</h1>
+        </div>
+        
 
     <script src="vue.js"></script>
     <script src="app.js"></script>
