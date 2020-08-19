@@ -12,7 +12,9 @@ new Vue({
             alt:"image",
             width:200,
             height:200
-        }
+        },
+        mytext:"v-text er kaj kortechi",
+        myhtml:"<b>Bold v-html</b>"
     },
     methods: {
         funs(){
