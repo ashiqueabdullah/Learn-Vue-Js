@@ -1,15 +1,18 @@
 new Vue({
     el:"#app",
     data:{
-       formData:{
-        firstName:'',
-        lastName:''
-       }
+       a:0,
+       b:0,
+       salary:10
     },
     methods:{
-        clickss(){
-            console.log(this.formData)
+        as(){
+            return this.a + this.salary;
+        },
+        bs(){
+            return this.b + this.salary;
         }
+
     }
     
     
