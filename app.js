@@ -6,9 +6,11 @@ new Vue({
         arr:[1,2,3,4],
         obj:{
             tr:true
-        },
-        fun:()=>{
-            console.log("Thik ache")
+        }
+    },
+    methods: {
+        funs(){
+            return this.title
         }
     }
 });
