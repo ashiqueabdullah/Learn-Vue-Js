@@ -1,11 +1,14 @@
 new Vue({
     el:"#app",
     data:{
-        name:'Ashique Abdullah'
+       formData:{
+        firstName:'',
+        lastName:''
+       }
     },
     methods:{
-        clk(name){
-            this.name=name
+        clickss(){
+            console.log(this.formData)
         }
     }
     
