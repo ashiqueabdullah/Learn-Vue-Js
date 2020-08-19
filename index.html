@@ -8,12 +8,24 @@
 <body>
     
         <div id="app">
-            <p v-once>Name: {{name}}</p>
-            <p>Name: {{name}}</p>
-            <p>{{update()}}</p>
+            <div id="box" v-on:mousemove="update">
+                
+            </div>
+            <p>X: {{x}}</p>
+            <p>Y: {{y}}</p> 
+            <p>{{name}}</p>
+            <button v-on:click="clk">Click Me</button>
         </div>
 
     <script src="vue.js"></script>
     <script src="app.js"></script>
+    <style>
+        #box{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            cursor: pointer;
+        }
+    </style>
 </body>
 </html>

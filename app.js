@@ -1,14 +1,19 @@
 new Vue({
     el:"#app",
     data:{
-       name:'Ashique Abdullah'
+        x:0,
+        y:0,
+        name:'Ashique Abdullah'
     },
     methods:{
-        update(){
-            setTimeout(()=>{
-                this.name="Sidra Ashraf"
-            },2000)
+        update(event){
+            this.x=event.clientX,
+            this.y=event.clientY
+        },
+        clk(){
+            this.name="Sidra Ashraf"
         }
     }
+    
     
 });
