@@ -1,11 +1,13 @@
 new Vue({
     el:"#app",
     data:{
-        ar:[1,2,3,4,5],
-        user:{
-            name:'Ashiquu Abdullah',
-            Age:24,
-            Occupation:'Software Engineer'
+       name:'Ashique Abdullah'
+    },
+    methods:{
+        update(){
+            setTimeout(()=>{
+                this.name="Sidra Ashraf"
+            },2000)
         }
     }
     

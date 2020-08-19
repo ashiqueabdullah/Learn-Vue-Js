@@ -8,18 +8,9 @@
 <body>
     
         <div id="app">
-
-           <p v-for="a in ar">
-                {{a}}
-           </p>
-
-           <p v-for="(a,index) in ar">
-                {{index}} : {{a}}
-            </p>
-
-            <p v-for="(value,key,index) in user">
-                {{key}} : {{value}} : {{index}}
-            </p>
+            <p v-once>Name: {{name}}</p>
+            <p>Name: {{name}}</p>
+            <p>{{update()}}</p>
         </div>
 
     <script src="vue.js"></script>
