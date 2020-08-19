@@ -18,6 +18,13 @@
                 <span>Age: {{si.Age}}</span><br>
                 <span>Occupation: {{si.Occupation}}</span><br>
            </p>
+
+           <p v-show="si.name=='Ashique Abdullah'">
+               <span>{{as.name}}</span>
+           </p>
+           <p v-show="si.name=='Sidra Ashraf'">
+            <span>{{si.name}}</span>
+        </p>
         </div>
 
     <script src="vue.js"></script>
