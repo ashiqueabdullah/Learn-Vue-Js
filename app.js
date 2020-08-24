@@ -1,34 +1,39 @@
-const temp1=`<h1>Name: {{user.name}}</h1>`;
-const temp2=``;
 
-
-
-const app1 =new Vue({
+new Vue({
     el:'#app1',
     data:{
-        user:{
-            name:'Ashique Abdullah',
-            age:24,
-            occupation:'Software Engineer'
-        }
+        name:"Ashique"
     },
     methods:{
-        update(){
-            app2.user.name="Sidra Ashraf" 
-        }
-    }
-    
-});
-
-
-const app2=new Vue({
-    el:'#app2',
-    data:{
-        user:{
-            name:'Ashique Abdullah',
-            age:24,
-            occupation:'Software Engineer'
+        updateName(){
+            this.name="Ashique Abdullah"
+        },
+        kill(){
+            this.$destroy()
         }
     },
-    template:temp1
+    beforeCreate(){
+        console.log("Before Create");
+    },
+    created(){
+        console.log("Created");
+    },
+    beforeMount(){
+        console.log("Before mount")
+    },
+    mounted(){
+        console.log("Mounted")
+    },
+    beforeUpdate(){
+        console.log('Before Update')
+    },
+    updated(){
+        console.log("Updated")
+    },
+    beforeDestroy(){
+        console.log('Before Destroy')
+    },
+    destroyed(){
+        console.log('Destroyed')
+    }
 });
