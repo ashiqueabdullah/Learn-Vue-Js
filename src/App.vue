@@ -1,6 +1,11 @@
 <template>
   <div>
-    <myHeader :students='studentsname'/>
+    <myHeader 
+      :fastname="fname"
+      :lasatName="lname"
+      :age="mage"
+      @updatefname='fname=$event'
+    />
     <myFooter/>
   </div>
 </template>
@@ -11,7 +16,9 @@ import myHeader from './Components/Header_Footer/Header'
 export default {
    data(){
      return {
-        studentsname:['Ashique','Abdullah','Sidra']
+        fname: "Ashique",
+        lname:"Abdullah",
+        mage:24
      }
    },
    components:{

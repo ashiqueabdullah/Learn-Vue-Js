@@ -1,21 +1,23 @@
 <template>
     <div>
         Header Working<br>
-        <ul>
-            <li v-for ="a in students" :key="a">
-                {{a}}
-            </li>
-        </ul>
-        <br>
+        <p>Fast Name:{{fastname}}</p>
+        <p>Last Name:{{lasatName}}</p>
+        <p>Age:{{age}}</p>
+        <button @click="update" >Chnage Name</button>
     </div>
 </template>
 
 <script >
     export default{
         props:{
-            students:{
-                type:Array,
-                requered:true
+            fastname: String,
+            lasatName: String,
+            age: Number 
+        },
+        methods:{
+            update(){
+                this.$emit('updatefname','Sidra')
             }
         }
     }
