@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import myHeader from './Components/Header_Footer/Header';
 import myFooter from './Components/Header_Footer/Footer';
 export default {
    data(){
@@ -15,7 +14,6 @@ export default {
      }
    },
    components:{
-     myHeader,
      myFooter
    }
 }
