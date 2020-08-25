@@ -1,36 +1,30 @@
 <template>
-  <div>
-    <myHeader 
-      :fastname="fname"
-      :lasatName="lname"
-      :age="mage"
-      @updatefname='fname=$event'
-    />
-    <myFooter/>
-  </div>
+    <myheader>
+      <h1 slot="fast">First</h1>
+      <h1 slot="snd">Second</h1>
+      <h1 :slot="load">Chnage hosie</h1>
+    </myheader>
 </template>
 
 <script>
-import myFooter from './Components/Header_Footer/Footer';
-import myHeader from './Components/Header_Footer/Header'
+import myheader from './Components/Header_Footer/Header'
 export default {
-   data(){
-     return {
-        fname: "Ashique",
-        lname:"Abdullah",
-        mage:24
-     }
-   },
-   components:{
-     myFooter,
-     myHeader
-   }
+  data(){
+    return{
+      load:''
+    }
+  },
+  components:{
+    myheader
+  },
+  created(){
+    setTimeout(()=>{
+      this.load='ld'
+    },2000)
+  }
 }
 </script>
 
-<style>
-div{
-  color:green;
-}
-  
+<style >
+
 </style>

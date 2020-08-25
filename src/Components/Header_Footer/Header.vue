@@ -1,28 +1,25 @@
 <template>
     <div>
-        Header Working<br>
-        <p>Fast Name:{{fastname}}</p>
-        <p>Last Name:{{lasatName}}</p>
-        <p>Age:{{age}}</p>
-        <button @click="update" >Chnage Name</button>
+        <slot name="fast"></slot>
+        
+        <h1 v-for="a in names" :key="a">
+            {{a}}
+        </h1>
+        <slot name="snd"></slot>
+        <slot name='ld'>Loading...</slot>
     </div>
 </template>
 
-<script >
-    export default{
-        props:{
-            fastname: String,
-            lasatName: String,
-            age: Number 
-        },
-        methods:{
-            update(){
-                this.$emit('updatefname','Sidra')
-            }
-        }
-    }
+<script>
+export default {
+  data(){
+      return {
+          names:['Ashique','Abdullah','Sidra','Ashraf']
+      }
+  }
+}
 </script>
 
 <style >
-   
+
 </style>
